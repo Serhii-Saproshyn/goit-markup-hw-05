@@ -53,7 +53,16 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="button primary" type="button">Замовити послугу</button>
+          <button class="button primary" type="button" data-modal-open>Замовити послугу</button>
+        </div>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal is-hidden">
+            <button type="button" class="modal-button" data-modal-close>
+              <svg width="11" height="11" class="modal-icon">
+                <use href="./images/symbol-defs.svg#icon-close-black"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
       <section class="section">
@@ -111,10 +120,17 @@
         <div class="container">
           <h2 class="section-title whitouttop">Чим ми займаємося</h2>
           <ul class="container-flex">
-            <li class="item"><img src="./images/img.jpg" alt="десктопні додатки" width="370" /></li>
-            <li class="item"><img src="./images/img1.jpg" alt="мобільні додатки" width="370" /></li>
+            <li class="item">
+              <img src="./images/img.jpg" alt="десктопні додатки" width="370" />
+              <div class="thumb-doing-desk"><p class="upper">Десктопні додатки</p></div>
+            </li>
+            <li class="item">
+              <img src="./images/img1.jpg" alt="мобільні додатки" width="370" />
+              <div class="thumb-doing-desk"><p class="upper">Мобільні додатки</p></div>
+            </li>
             <li class="item">
               <img src="./images/img2.jpg" alt="дизайнерські рішення" width="370" />
+              <div class="thumb-doing-desk"><p class="upper">Дизайнерські рішення</p></div>
             </li>
           </ul>
         </div>
@@ -477,5 +493,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
