@@ -215,6 +215,13 @@ img {
   left: 0;
 }
 
+.bcg-paragraph {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
+
 .section.new-back {
   background-color: var(--back-color-second);
 }
@@ -272,8 +279,8 @@ img {
   justify-content: center;
   align-items: center;
   fill: var(--icon-color);
-  transition-property: background-color;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, fill;
 }
 .social-link:hover,
 .social-link:focus {
@@ -295,7 +302,7 @@ img {
   margin-right: 50px;
 }
 
-.site-nav .link.current {
+.link.current {
   position: relative;
   color: var(--accent-color);
 }
@@ -321,8 +328,8 @@ img {
 .site-nav .link {
   padding: 32px 0;
   display: block;
-  transition-property: background-color;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 .nav-icon {
@@ -345,8 +352,8 @@ img {
   padding: 32px 0;
   display: flex;
   align-items: center;
-  transition-property: background-color;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 .site-contacts-footer li:not(:last-child) {
@@ -359,8 +366,8 @@ img {
 }
 .address-second {
   color: var(--footer-link-color);
-  transition-property: background-color;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 .link:hover,
@@ -385,11 +392,6 @@ img {
   margin-right: 8px;
 }
 
-.examples-list .secondary:hover,
-.examples-list .secondary:focus {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
 .examples-container {
   display: flex;
   flex-wrap: wrap;
@@ -435,6 +437,7 @@ img {
   justify-content: center;
   width: 100%;
   height: 100%;
+  color: var(--bcg-body);
   background-color: var(--thumb-examples-bcg);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -446,9 +449,9 @@ img {
   margin: 63px 24px;
 }
 
-.examples-container .item:hover .thumb-description {
+.examples-container .link:hover .thumb-description,
+.examples-container .link:focus .thumb-description {
   transform: translateY(0);
-  color: var(--bcg-body);
 }
 
 .button {
@@ -462,23 +465,20 @@ img {
   background-color: var(--accent-color);
   width: 216px;
   height: 50px;
-  border: solid var(--accent-color);
+  border: none;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
   align-items: center;
   letter-spacing: 0.06em;
-  transition-property: background-color;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
 }
 
 .button.primary:hover,
 .button.primary:focus {
-  color: var(--main-color);
   background-color: var(--back-main-button);
-  border-color: var(--back-main-button);
-  border-radius: 4px;
 }
 
 .backdrop {
@@ -516,16 +516,17 @@ img {
 }
 
 .modal-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
-  margin-top: 8px;
-  margin-left: 490px;
   background-color: var(--bcg-body);
-  border-color: var(--icon-color);
   border-radius: 50%;
+  border-color: var(--icon-color);
   fill: var(--accent-second);
   cursor: pointer;
   transition-property: background-color;
@@ -534,9 +535,7 @@ img {
 
 .modal-button:hover,
 .modal-button:focus {
-  background-color: var(--accent-color);
-  fill: var(--bcg-body);
-  border-color: var(--accent-color);
+  fill: var(--accent-color);
 }
 .button.secondary {
   padding: 6px 22px;
@@ -548,16 +547,16 @@ img {
   line-height: 1.6;
   text-align: center;
   letter-spacing: 0.03em;
-  transition-property: background-color;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color, box-shadow;
 }
 
 .button.secondary:hover,
 .button.secondary:focus {
   color: var(--main-color);
   background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  background-clip: padding-box;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .examples-title {
@@ -638,8 +637,8 @@ nav {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   fill: var(--icon-color);
-  transition-property: background-color;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, fill;
 }
 
 .clients-link:hover,
@@ -672,8 +671,8 @@ nav {
   align-items: center;
   background-color: var(--icon-bcg-footer);
   fill: var(--main-color);
-  transition-property: background-color;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
 }
 
 .social-link-footer:hover,
